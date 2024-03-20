@@ -15,3 +15,9 @@ Porém, há algumas regras que devem ser seguidas:
 Como resultado final, é esperado que sua solução entregue o resultado correto em **um tempo de execução de no mínimo 4x menor** que a solução inicial, ao considerar **uma entrada de no mínimo 10 mil elementos** aleatórios gerados pela função ```getRandDataSlice()```. Para isso, certifique-se de utilizar a rotina de benchmark implementada em **run_test.go**.
 
 Importante mencionar que o ganho de 4x no tempo de execução é o *mínimo* esperado. Quando mais rápido for sua solução, maior será o seu PLR no próximo semestre :)
+
+## Instruções
+
+- Faça um fork deste repositório
+- Abra um PR contendo um diretório com a sua solução
+- Dentro do diretório deve conter um README.md com os dados de quem criou a solução (nome e @ do Github)
