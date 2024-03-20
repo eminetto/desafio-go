@@ -20,4 +20,9 @@ Importante mencionar que o ganho de 4x no tempo de execução é o *mínimo* esp
 
 - Faça um fork deste repositório
 - Abra um PR contendo um diretório com a sua solução
-- Dentro do diretório deve conter um README.md com os dados de quem criou a solução (nome e @ do Github)
+    - O diretório deve ter o mesmo nome que seu usuário do GitHub
+- O diretório deve conter:
+    - README.md com os dados de quem criou a solução (nome e @ do Github) e quaisquer outras informações que achar relevante, como o tempo de execução de sua solução
+    - Sua versão do arquivo `run.go`, que respeite as regras citadas acima
+- O PR **não deve** alterar nenhum arquivo da raiz do repositório, nem outros diretórios que já tenham sido submetidos
+- Recomenda-se a criação de uma solução própria, sem o uso de ferramentas de AI (como o GitHub Copilot) ou cópia de código encontrado em outras fontes
