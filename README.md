@@ -6,7 +6,7 @@ Você trabalha como Engenheira(o) de Software no time de Engenharia de Dados de 
 
 Porém, há algumas regras que devem ser seguidas:
 
-* Sua implementação deve continuar retornando um **resultado correto**. Para isso, certifique-se de utilizar as rotinas de testes previamente implementadas em **run_test.go** para asseguar que suas modificações não estão *quebrando* a corretude do programa.
+* Sua implementação deve continuar retornando um **resultado correto**. Para isso, certifique-se de utilizar as rotinas de testes previamente implementadas em **run_test.go** para assegurar que suas modificações não estão *quebrando* a corretude do programa.
 
 * Você **NÃO PODE** alterar nenhum dos arquivos: **lib.go**, **baseline.go**, **run_test.go**. Você pode somente modificar a função ```Run()``` definida em **run.go**, e se desejar, você pode criar funções adicionais para serem invocadas em ```Run()```.
 
