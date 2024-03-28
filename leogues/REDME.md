@@ -5,7 +5,7 @@ Github: [@leogues](https://github.com/leogues)
 
 ## Informações sobre desafio
 
-A principio, busquei otimizar o cálculo da moda empregando um mapa para registrar a contagem de ocorrências de cada elemento. No entanto, ao aprender e depois fazer o profile da aplicação, identifiquei que o cálculo da moda ainda era a operação mais demorada. Observando que outros algoritmos utilizavam ordenação do array, optei por testar essa abordagem também para o cálculo da moda. E essa mudança acabou resultando em uma significativa redução de tempo de execução.
+A principio, busquei otimizar o cálculo da moda empregando um mapa para registrar a contagem de ocorrências de cada elemento. No entanto, ao aprender e depois fazer o profile da aplicação, identifiquei que o cálculo da moda ainda era a operação mais demorada. Observando que outros calculos utilizavam ordenação do array, optei por testar essa abordagem também para o cálculo da moda. E essa mudança acabou resultando em uma significativa redução de tempo de execução.
 
 Obs: Apesar de não ver uma mudança no tempo ao executar os tests, quando eu fiz a ordenação no inicio da função Run tive ganho bem expressivo de tempo ao fazer o profile da aplicação.
 
