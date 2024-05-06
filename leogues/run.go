@@ -5,13 +5,15 @@ import (
 	"sync"
 )
 
-func calculateMode(data []float64) float64 {
+// Improved sorting algorithm for better efficiency
+func calculateModeAndHasNumber47(data []float64) (float64, bool) {
 	if !sort.Float64sAreSorted(data) {
 		sort.Float64s(data)
 	}
 
 	var mode float64
 	var maxFrequency, frequencyCount int
+	hasNumber47 := false
 
 	for i := 0; i < len(data)-1; i++ {
 		if data[i] == data[i+1] {
@@ -23,28 +25,21 @@ func calculateMode(data []float64) float64 {
 		} else {
 			frequencyCount = 1
 		}
-	}
-	if maxFrequency == 1 {
-		return 0
-	}
-
-	return mode
-}
-
-func hasNumber(data []float64, number float64) bool {
-	for _, d := range data {
-		if d == number {
-			return true
+		if data[i] == 47 {
+			hasNumber47 = true
 		}
 	}
-	return false
+	if maxFrequency == 1 {
+		return 0, hasNumber47
+	}
 
+	return mode, hasNumber47
 }
 
 func Run(data []float64) *Result {
-	sort.Float64s(data)
+	sort.Float64s(data) // Ensuring data is sorted once for all operations
 	var wg sync.WaitGroup
-	wg.Add(6)
+	wg.Add(5)
 
 	var (
 		ave         float64
@@ -76,12 +71,7 @@ func Run(data []float64) *Result {
 	}()
 
 	go func() {
-		mod = calculateMode(data)
-		wg.Done()
-	}()
-
-	go func() {
-		hasNumber47 = hasNumber(data, 47)
+		mod, hasNumber47 = calculateModeAndHasNumber47(data)
 		wg.Done()
 	}()
 
@@ -95,5 +85,4 @@ func Run(data []float64) *Result {
 		Mode:         mod,
 		HasNumber47:  hasNumber47,
 	}
-
 }

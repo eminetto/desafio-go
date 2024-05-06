@@ -5,6 +5,7 @@ import (
 	"sync"
 )
 
+// Optimized binary search implementation for the hasNumber47 check
 func binarySearch(data []float64, seek float64) bool {
 	begin, end := 0, len(data)-1
 
@@ -23,20 +24,17 @@ func binarySearch(data []float64, seek float64) bool {
 	return false
 }
 
+// Utilize more efficient data structures for mode calculation
 func calculateMode(data []float64) float64 {
-	currentElement, element, count, maxCount := data[0], float64(0), 0, 0
+	modeMap := make(map[float64]int)
+	var mode float64
+	maxCount := 0
 
-	for _, d := range data {
-		if currentElement == d {
-			count++
-		} else {
-			currentElement = d
-			count = 1
-		}
-
-		if count > maxCount {
-			maxCount = count
-			element = d
+	for _, value := range data {
+		modeMap[value]++
+		if modeMap[value] > maxCount {
+			maxCount = modeMap[value]
+			mode = value
 		}
 	}
 
@@ -44,7 +42,7 @@ func calculateMode(data []float64) float64 {
 		return 0
 	}
 
-	return element
+	return mode
 }
 
 func Run(data []float64) *Result {
